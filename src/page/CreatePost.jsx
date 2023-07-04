@@ -5,6 +5,7 @@ import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 
+
 const CreatePost = () => {
   const navigate = useNavigate();
 
@@ -42,7 +43,7 @@ const CreatePost = () => {
         formData.append('prompt', form.prompt);
         formData.append('photo', form.photo);
 
-        const response = await fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch('https://imagination-backend.onrender.com/api/v1/post', {
           method: 'POST',
           body: formData,
         });
